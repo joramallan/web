@@ -1,0 +1,1 @@
+let date=new Date,elem=document.getElementById("date"),year_elem=document.getElementById("year");elem.innerHTML=date.toDateString(),year_elem.innerHTML=date.getFullYear();

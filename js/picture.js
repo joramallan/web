@@ -1,0 +1,1 @@
+var pictures=["image/joram0.png","image/joram2.png"],b=0;function changeImage(e){$("#pic").attr("src",pictures[e])}setInterval(function(){b+1>pictures.length&&(b=0),changeImage(b++)},15e3);
