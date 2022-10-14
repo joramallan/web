@@ -1,1 +1,55 @@
-function whatsapp(){var e=$("#customer_name").val();e=encodeURI(e);var t=$("#message").val();if(t=encodeURI(t)+"%0A%0A",""==e||""==t)return $(".info-message").show(300).text("It looks like the form is not filled completely"),void setTimeout(function(){$(".info-message").hide(300)},7e3);changeText();var n="```"+t+"``` *"+e+"*";window.location="https://wa.me/255752112544?text="+n,$("#customer_name").val(""),$("#message").val("")}function changeText(){$("#sendBtn").text("Loading WhatsApp.."),setTimeout(function(){$("#sendBtn").text("Send Via WhatsApp")},5e3)}function mailTo(){var e=document.createElement("a");e.href="mailto:joramallan@gmail.com",e.click()}function instaTo(){var e=document.createElement("a");e.href="https://www.instagram.com/joramkingu/",e.click()}function faceTo(){var e=document.createElement("a");e.href="https://web.facebook.com/sunbuct.makala/",e.click()}function show_list_content(e,t){$(".list-content");$("#"+e).is(":visible")?($("#"+e).hide(300),$(t).find("img").attr("src","icon/dwn.png")):($("#"+e).show(300),$(t).find("img:nth-child(1)").attr("src","icon/up.png"))}
+function whatsapp(){
+    var customerName = $("#customer_name").val();
+    customerName = encodeURI(customerName);
+    var textMessage = $("#message").val();
+    textMessage = encodeURI(textMessage)+"%0A%0A";
+    if (customerName == "" || textMessage == "") {
+        $(".info-message").show(300).text("It looks like the form is not filled completely");
+        setTimeout(function(){
+            $(".info-message").hide(300);
+        }, 7000);
+        return;
+    }
+    changeText();
+    var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
+    // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
+    window.location="https://wa.me/255752112544?text="+fullMessage;
+    $("#customer_name").val("");
+    $("#message").val("");
+}
+
+function changeText(){
+    $("#sendBtn").text("Loading WhatsApp..");
+        setTimeout(function(){
+            $("#sendBtn").text("Send Via WhatsApp");
+    }, 5000);
+}
+
+function mailTo(){
+    var email = document.createElement("a");
+    email.href = "mailto:joramallan@gmail.com";
+    email.click();
+}
+
+function instaTo(){
+    var instaElem = document.createElement("a");
+    instaElem.href = "https://www.instagram.com/joramkingu/";
+    instaElem.click();
+}
+
+function faceTo(){
+    var faceElem = document.createElement("a");
+    faceElem.href = "https://web.facebook.com/sunbuct.makala/";
+    faceElem.click();
+}
+
+function show_list_content(id, e){
+    var list_content = $(".list-content");
+    if ($("#"+id).is(":visible")) {
+        $("#"+id).hide(300);
+        $(e).find("img").attr("src", "icon/dwn.png");
+    }else{
+        $("#"+id).show(300);
+        $(e).find("img:nth-child(1)").attr("src", "icon/up.png");
+    }
+}
