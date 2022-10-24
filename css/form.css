@@ -1,1 +1,99 @@
-.form-div{margin-top:20px}.form-item{border:2px solid #d0d1ce;padding-left:10px}.form-item,.form-item-submit,.form-item-next,.form-item-textarea{height:45px;width:100%;font-size:13px;border:1px solid #d0d1ce;border-radius:10px;margin-bottom:10px;font-family:monospace}.form-item-textarea{height:unset;border:none;box-shadow:1px 1px 4px;padding:10px;max-width:100%;min-height:50px;min-width:100%;max-height:300px;font-family:monospace}.form-item-submit{background-color:green;color:#fff;border:none;box-shadow:1px 1px 4px #000}.form-item-next{background-color:blue;color:#fff}#info{display:none}.error{color:red;font-size:13px;display:none}.hidden{display:none}#residence,#email,#phone,#password,#confirm-password,#submit{display:none}label{font-size:12px}@media only screen and (max-width:600px){.form{padding:0!important;margin:0!important}.form-div{margin-top:18px}.form-item,.form-item-submit{height:40px;width:100%;font-size:14px;border:1px solid #d0d1ce}.error{font-size:10px}label{font-size:10px}}
+
+.form-div{
+    margin-top: 20px;
+}
+
+.form-item{
+    border: 2px solid #d0d1ce;
+    padding-left: 10px;
+}
+
+.form-item, .form-item-submit, .form-item-next, .form-item-textarea{
+    height: 45px;
+    width: 100%;
+    font-size: 13px;
+    border: 1px solid #d0d1ce;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.form-item-textarea{
+    height: unset;
+    /* border: 1px outset #d0d1ce; */
+    border: none;
+    box-shadow: 1px 1px 4px;
+    padding: 10px;
+    max-width: 100%;
+    min-height: 50px;
+    min-width: 100%;
+    max-height: 300px;
+    font-family: monospace;
+}
+
+.form-item-submit{
+    background-color: green;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 4px black;
+}
+
+.form-item-next{
+    background-color: blue;
+    color: white;
+}
+
+#info{
+    display: none;
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+/* NEXT FLOW */
+
+#residence, #email, #phone, #password, #confirm-password, #submit{
+    display: none;
+}
+
+label{
+    font-size: 12px;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .form{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .form-div{
+        margin-top: 18px;
+    }
+
+    .form-item, .form-item-submit{
+        height: 40px;
+        width: 100%;
+        font-size: 14px;
+        border: 1px solid #d0d1ce;
+    }
+
+    .error{
+        font-size: 10px;
+    }
+
+    label{
+        font-size: 10px;
+    }
+}

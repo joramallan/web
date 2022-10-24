@@ -1,4 +1,4 @@
-var myArray = ["Hello, Welcome to my website", "I am a Software Developer", " I create Personal Websites", "Business Management System", "Student Management System", "Bus Ticket Reservation System", "Employee Record Management System", "Hotel Management System", "Blogs etc", "See more details below..", "You are welcome"];
+var myArray = ["Hello, Welcome to my website", "I'm Joram, an Expert in Computer Science", "I develop Web and Mobile applications", "Business Management System", "Student Management System", "Bus Ticket Reservation System", "Employee Record Management System", "Hotel Management System", "Blogs etc", "See more details below..", "You are welcome"];
 var annoElem = document.getElementById("anno");
 let shaker;
 let i = 0;
