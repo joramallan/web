@@ -1,8 +1,8 @@
 function whatsapp(){
     var customerName = $("#customer_name").val();
-    customerName = encodeURI("From " + customerName + " Via Your Website");
+    customerName = encodeURI("From " + customerName + " Via Your Website") + "%0A%0A";
     var textMessage = $("#message").val();
-    textMessage = "%0A%0A" + encodeURI(textMessage);
+    textMessage = encodeURI(textMessage);
     if (customerName == "" || textMessage == "") {
         $(".info-message").show(300).text("It looks like the form is not filled completely");
         setTimeout(function(){
