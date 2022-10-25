@@ -1,8 +1,9 @@
 function whatsapp(){
     var customerName = $("#customer_name").val();
-    customerName = encodeURI("From " + customerName + " Via Your Website") + "%0A%0A";
+    customerName = encodeURI("From " + customerName) + "%0A%0A";
     var textMessage = $("#message").val();
-    textMessage = encodeURI(textMessage);
+    textMessage = encodeURI(textMessage) + "%0A%0A";
+    var site = encodeURI("https://joramallan.github.io/web");
     if (customerName == "" || textMessage == "") {
         $(".info-message").show(300).text("It looks like the form is not filled completely");
         setTimeout(function(){
@@ -12,7 +13,7 @@ function whatsapp(){
     }
     changeText();
     //var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
-    var fullMessage = "_*" + customerName + "*_" + textMessage;
+    var fullMessage = "_*" + customerName + "*_" + textMessage + site;
     // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
     window.location="https://wa.me/255752112544?text="+fullMessage;
     $("#customer_name").val("");
