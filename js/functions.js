@@ -1,6 +1,6 @@
 function whatsapp(){
     var customerName = $("#customer_name").val();
-    customerName = encodeURI("From " + customerName) + "%0A%0A";
+    customerName = encodeURI("_*From " + customerName + "*_") + "%0A%0A";
     var textMessage = $("#message").val();
     textMessage = encodeURI(textMessage) + "%0A%0A";
     var site = encodeURI("https://joramallan.github.io/web");
@@ -13,7 +13,7 @@ function whatsapp(){
     }
     changeText();
     //var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
-    var fullMessage = "_*" + customerName + "*_" + textMessage + site;
+    var fullMessage = customerName + textMessage + site;
     // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
     window.location="https://wa.me/255752112544?text="+fullMessage;
     $("#customer_name").val("");
