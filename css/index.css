@@ -255,10 +255,6 @@ h3.content-header::before {
     text-decoration: none;
 }
 
-.info{
-    text-align: justify;
-}
-
 @media only screen and (min-width: 768px){
     body{
         margin: 0 30%;

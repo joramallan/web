@@ -1,4 +1,4 @@
-var pictures = ["image/joram0.png", "image/mygif.gif"];
+var pictures = ["../image/joram0.png", "../image/mygif.gif"];
 
 var b = 0;
 
