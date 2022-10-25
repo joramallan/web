@@ -1,22 +1,24 @@
 
 function whatsapp(){
     var customerName = $("#customer_name").val();
-        customerName = encodeURI(customerName);
-        var textMessage = $("#message").val();
-        textMessage = encodeURI(textMessage)+"%0A%0A";
-        if (customerName == "" || textMessage == "") {
-            $(".info-message").show(300).text("It looks like the form is not filled completely");
-            setTimeout(function(){
-                $(".info-message").hide(300);
-            }, 7000);
-            return;
-        }
-        changeText();
-        var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
-        // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
-        window.location="https://wa.me/255752112544?text="+fullMessage;
-        $("#customer_name").val("");
-        $("#message").val("");
+    customerName = encodeURI("_*From " + customerName + "*_") + "%0A%0A";
+    var textMessage = $("#message").val();
+    textMessage = encodeURI(textMessage) + "%0A%0A";
+    var site = encodeURI("https://joramallan.github.io/web");
+    if (customerName == "" || textMessage == "") {
+        $(".info-message").show(300).text("Jaza fomu kwa usahihi");
+        setTimeout(function(){
+            $(".info-message").hide(300);
+        }, 7000);
+        return;
+    }
+    changeText();
+    //var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
+    var fullMessage = customerName + textMessage + site;
+    // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
+    window.location="https://wa.me/255752112544?text="+fullMessage;
+    $("#customer_name").val("");
+    $("#message").val("");
 }
 
 function changeText(){
@@ -24,24 +26,6 @@ function changeText(){
         setTimeout(function(){
             $("#sendBtn").text("Tuma kupitia WhatsApp");
     }, 5000);
-}
-
-function mailTo(){
-    var email = document.createElement("a");
-    email.href = "mailto:joramallan@gmail.com";
-    email.click();
-}
-
-function instaTo(){
-    var instaElem = document.createElement("a");
-    instaElem.href = "https://www.instagram.com/joramkingu/";
-    instaElem.click();
-}
-
-function faceTo(){
-    var faceElem = document.createElement("a");
-    faceElem.href = "https://web.facebook.com/sunbuct.makala/";
-    faceElem.click();
 }
 
 function show_list_content(id, e){

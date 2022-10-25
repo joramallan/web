@@ -27,24 +27,6 @@ function changeText(){
     }, 5000);
 }
 
-function mailTo(){
-    var email = document.createElement("a");
-    email.href = "mailto:joramallan@gmail.com";
-    email.click();
-}
-
-function instaTo(){
-    var instaElem = document.createElement("a");
-    instaElem.href = "https://www.instagram.com/joramkingu/";
-    instaElem.click();
-}
-
-function faceTo(){
-    var faceElem = document.createElement("a");
-    faceElem.href = "https://web.facebook.com/sunbuct.makala/";
-    faceElem.click();
-}
-
 function show_list_content(id, e){
     var list_content = $(".list-content");
     if ($("#"+id).is(":visible")) {
