@@ -9,7 +9,7 @@ function whatsapp(){
         }, 7000);
         return;
     }
-    customerName = encodeURI("_*From " + customerName + "*_") + "%0A%0A";
+    customerName = encodeURI("_From *" + customerName + "*_") + "%0A%0A";
     textMessage = encodeURI(textMessage) + "%0A%0A";
     changeText();
     //var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
