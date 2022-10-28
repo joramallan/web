@@ -1,4 +1,4 @@
-var myArray = ["Halo, Karibu kwenye tovuti yangu", "Naitwa Joram, Ni Msanidi wa Programu..", "Tovuti za kibinafsi", "Mfumo ya Uendeshaji wa Biashara", "Mfumo ya taarifa za wanafunzi", "Mfumo wa kukata tiketi ya basi", "Mfumo wa kuhifadhi taarifa za wafanyakazi", "Mfumo wa uendeshaji wa hoteli", "Blogi n.k", "Tazama maelezo zaidi hapa chini", "Karibu sana"];
+var myArray = ["Halo, Karibu kwenye tovuti yangu", "Naitwa Joram, mtaalam wa Kompyuta", "Angalia maelezo zaidi hapa chini", "Karibu sana"];
 var annoElem = document.getElementById("anno");
 let shaker;
 let i = 0;
