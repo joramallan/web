@@ -9,21 +9,21 @@ function whatsapp(){
         }, 7000);
         return;
     }
-    customerName = encodeURI("_*From " + customerName + "*_") + "%0A%0A";
+    customerName = encodeURI("_From *" + customerName + "*_") + "%0A%0A";
     textMessage = encodeURI(textMessage) + "%0A%0A";
     changeText();
     //var fullMessage = "```"+textMessage+"``` *"+customerName+"*";
     var fullMessage = customerName + textMessage + site;
     // window.location="https://api.whatsapp.com/send?phone=+255752112544&text="+fullMessage;
     window.location="https://wa.me/255752112544?text="+fullMessage;
-    $("#customer_name").val("");
-    $("#message").val("");
 }
 
 function changeText(){
     $("#sendBtn").text("Loading WhatsApp..");
         setTimeout(function(){
-            $("#sendBtn").text("Send Via WhatsApp");
+            $("#sendBtn").text("Send");
+            $("#customer_name").val("");
+            $("#message").val("");
     }, 5000);
 }
 
